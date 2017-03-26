@@ -32,7 +32,7 @@ open class BaseButtonBarPagerTabStripViewController<ButtonBarCellType : UICollec
     public var changeCurrentIndexProgressive: ((_ oldCell: ButtonBarCellType?, _ newCell: ButtonBarCellType?, _ progressPercentage: CGFloat, _ changeCurrentIndex: Bool, _ animated: Bool) -> Void)?
 
 
-    @IBOutlet public weak var buttonBarView: ButtonBarView!
+    @IBOutlet public var buttonBarView: ButtonBarView!
 
     lazy private var cachedCellWidths: [CGFloat]? = { [unowned self] in
         return self.calculateWidths()
